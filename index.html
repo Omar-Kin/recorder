@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Screen Recorder</h1>
+        <div class="button-group">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <button id="pauseBtn" disabled>Pause</button>
+            <button id="resumeBtn" disabled>Resume</button>
+            <button id="micBtn">Toggle Microphone</button>
+            <button id="systemSoundBtn">Toggle System Sound</button>
+        </div>
+        <div class="slider-container">
+            <label for="micVolume">Microphone Volume:</label>
+            <input type="range" id="micVolume" min="0" max="100" value="100">
+            <span id="micVolumeValue">100%</span>
+        </div>
+        <div class="slider-container">
+            <label for="systemSoundVolume">System Sound Volume:</label>
+            <input type="range" id="systemSoundVolume" min="0" max="100" value="100">
+            <span id="systemSoundVolumeValue">100%</span>
+        </div>
+        <div class="settings-group">
+            <select id="resolutionSelect">
+                <option value="3840x2160">3840x2160 (4K)</option>
+                <option value="2560x1440">2560x1440 (2K)</option>
+                <option value="1920x1080">1920x1080</option>
+                <option value="1600x900">1600x900</option>
+                <option value="1366x768">1366x768</option>
+                <option value="1280x720">1280x720</option>
+                <option value="1024x576">1024x576</option>
+                <option value="854x480">854x480</option>
+                <option value="640x360">640x360</option>
+                <option value="426x240">426x240</option>
+            </select>
+            <select id="videoTypeSelect">
+                <option value="video/mp4">MP4</option>
+                <option value="video/webm">WebM</option>
+            </select>
+            <select id="fpsSelect">
+                <option value="30">30 FPS</option>
+                <option value="60">60 FPS</option>
+                <option value="90">90 FPS</option>
+                <option value="120">120 FPS</option>
+                <option value="144">144 FPS</option>
+                <option value="240">240 FPS</option>
+            </select>
+            <label for="cameraCheckbox">Record Camera</label>
+            <input type="checkbox" id="cameraCheckbox">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 OmarCodePlay. All rights reserved.</p>
+        <p>Visit <a href="https://omar-codeplay.netlify.app/">website</a> for more information.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
